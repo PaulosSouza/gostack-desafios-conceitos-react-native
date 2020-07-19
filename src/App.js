@@ -41,6 +41,7 @@ export default function App() {
       <StatusBar barStyle="light-content" backgroundColor="#7159c1" />
       <SafeAreaView style={styles.container}>
         <FlatList 
+          horizontal={true}
           data={repositories}
           keyExtractor={(repository) => repository.id}
           renderItem={({ item: repository }) => (
@@ -89,6 +90,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 15,
     backgroundColor: "#fff",
     padding: 20,
+    height: 200
   },
   repository: {
     fontSize: 32,
